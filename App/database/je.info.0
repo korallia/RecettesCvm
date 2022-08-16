@@ -1,0 +1,320 @@
+2022-08-16 14:38:47.471 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @28859e83
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @28859e83
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @28859e83
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 14:40:33.042 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @7bbd8a4c
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @7bbd8a4c
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @7bbd8a4c
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:21:22.735 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:21:46.523 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @16627f05
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @16627f05
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @16627f05
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:22:10.277 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @4852d3e1
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @4852d3e1
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @4852d3e1
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:26:27.693 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:29:19.681 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:32:59.496 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:33:35.520 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:33:54.823 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:34:53.627 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @5f314a33
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @5f314a33
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @5f314a33
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:53:15.099 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:53:55.253 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 17:55:18.395 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 18:01:58.174 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 18:09:47.445 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @48d5fe11
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @48d5fe11
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @48d5fe11
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 18:15:04.983 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 18:17:11.826 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 19:43:24.807 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @6db9f5a4
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
+2022-08-16 19:43:34.218 UTC AVERTISSEMENT [database] Error accessing or writing statistics capture file  je.stat.csvjava.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @72879ba5
+java.lang.IllegalStateException: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @72879ba5
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:86)
+	at com.sleepycat.je.statcap.JvmStats.loadStats(JvmStats.java:117)
+	at com.sleepycat.je.statcap.StatCapture.getStats(StatCapture.java:286)
+	at com.sleepycat.je.statcap.StatCapture.outputStats(StatCapture.java:221)
+	at com.sleepycat.je.statcap.StatCapture.onWakeup(StatCapture.java:194)
+	at com.sleepycat.je.utilint.DaemonThread.run(DaemonThread.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalAccessException: class com.sleepycat.je.utilint.JVMSystemUtils cannot access class sun.management.BaseOperatingSystemImpl (in module java.management) because module java.management does not export sun.management to unnamed module @72879ba5
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at com.sleepycat.je.utilint.JVMSystemUtils.getSystemLoad(JVMSystemUtils.java:83)
+	... 6 more
+
