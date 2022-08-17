@@ -17,8 +17,10 @@ import com.mongodb.Block;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.sleepycat.je.Cursor;
 import com.sleepycat.je.Database;
 import com.sleepycat.je.DatabaseEntry;
+import com.sleepycat.je.DatabaseException;
 import com.sleepycat.je.LockMode;
 import com.sleepycat.je.OperationStatus;
 
@@ -29,8 +31,6 @@ public class RecipeDAO {
 	static MongoDatabase connectionMongo = MongoConnection.getConnection();
 	static MongoCollection<Document> collection = connectionMongo.getCollection("collection_recettes");
 	static Database connectionBerkeley = BerkeleyConnection.getConnection();
-	static Recipe lastRecipe = null;
-	
 	/**
 	 * M�thode permettant de sauvegarder une recette
 	 * 
@@ -49,9 +49,6 @@ public class RecipeDAO {
 		Document doc = new Document();
 		Document ingredients = new Document();
 		
-		
-		
-		
 		try {
 			for (int i = 0; i < recipe.getIngredients().size(); i++ ) {
 				Document ingredient = new Document();
@@ -60,13 +57,13 @@ public class RecipeDAO {
 				ingredients.append("Ingredient"+" "+(i+1), ingredient);
 			}
 			if( RecipeDAO.getRecipeCount()==0) {
-				doc.append("ID",1 );	
+				doc.append("ID",Integer.toUnsignedLong(1) );	
 			}
 			else {
 				doc.append("ID", getLastAddedRecipe().getId()+1);
 			}
 			
-			doc.append("Name", recipe.getName());
+			doc.append("Name", recipe.getName().toLowerCase());
 			doc.append("Steps", recipe.getSteps());
 			doc.append("Ingredients", ingredients);
 			doc.append("Portion_Number", recipe.getPortion());
@@ -80,14 +77,13 @@ public class RecipeDAO {
 			}
 			else {
 				Document IdDoc = new Document();
-				IdDoc.append("_id", recipe.getId());
+				IdDoc.append("ID", recipe.getId());
 				RecipeDAO.collection.replaceOne(IdDoc, doc);
-				DatabaseEntry theKey = new DatabaseEntry(recipe.getName().getBytes("UTF-8"));
+				DatabaseEntry theKey = new DatabaseEntry(recipe.getName().toLowerCase().getBytes("UTF-8"));
 				DatabaseEntry theData = new DatabaseEntry(recipe.getImageData());
 				RecipeDAO.connectionBerkeley.put(null, theKey, theData);
 				//does this replace the field because it has the same key or does it create a new one
 			}
-			
 			
 		    success = true;
 		}
@@ -99,15 +95,13 @@ public class RecipeDAO {
 		
 	}
 		
-	
-
 	/**
 	 * M�thode permettant de retourner la liste des recettes de la base de donn�es.
 	 * 
 	 * Notes importantes:
 	 * - N'oubliez pas de limiter les r�sultats en fonction du param�tre limit
 	 * - La liste doit �tre tri�es en ordre croissant, selon le nom des recettes
-	 * - Le champ filtre doit permettre de filtrer selon le pr�fixe du nom (insensible � la casse)
+	 * -  (insensible � la casse)
 	 * - N'oubliez pas de mettre l'ID dans la recette
 	 * - Il pourrait ne pas y avoir de filtre (champ filtre vide)
 	 * 	 * 
@@ -115,11 +109,51 @@ public class RecipeDAO {
 	 * @param limit permet de restreindre les r�sultats
 	 * @return la liste des recettes, selon le filtre si n�cessaire 
 	 */
-	public static List<Recipe> getRecipeList(String filter, int limit) {
-		List<Recipe> recipeList = new ArrayList<Recipe>();
-		
-		
-		
+	public static List<Recipe> getRecipeList(final String filter, int limit) {
+		final List<Recipe> recipeList = new ArrayList<Recipe>();
+		FindIterable<Document> iterator = null;
+		if (filter.equals("")) {
+		 iterator = collection.find();}
+		else {
+			Document regexQuerry = new Document();
+			regexQuerry.append("$regex","^"+filter + ".*");
+			Document criteria = new Document("Name",regexQuerry);
+			iterator =collection.find(criteria);
+		}
+		iterator.limit(limit).sort(new Document("Name",1));
+		try {
+			iterator.forEach(new Block<Document>() {
+				@Override
+				public void apply(final Document document) {
+					byte[] retData = null;
+					Long Id = document.getLong("ID");
+					Document ingredients = (Document) document.get("Ingredients");
+					String recipeName = document.getString("Name");
+					List<String> steps = (List<String>) document.get("Steps");
+					int portions = document.getInteger("Portion_Number");
+					int cookTime = document.getInteger("Cooktime");
+					int prepTime = document.getInteger("Preptime");
+					List<Ingredient> ingredientsList = new ArrayList<Ingredient>();
+					for ( int i =0; i < ingredients.size();i++) {
+						Document ingredient = (Document) ingredients.get("Ingredient"+" "+(i+1));
+						ingredientsList.add(new Ingredient(ingredient.getString("Quantity"),ingredient.getString("IngredientName")));
+					}
+				   
+					try {
+						 DatabaseEntry theKey = new DatabaseEntry(recipeName.getBytes("UTF-8"));
+						 DatabaseEntry theData = new DatabaseEntry();
+						 if (connectionBerkeley.get(null, theKey, theData, LockMode.DEFAULT) == OperationStatus.SUCCESS) { 
+						    	retData = theData.getData();
+						    	recipeList.add(new Recipe(Id,recipeName,prepTime,cookTime,portions,steps,ingredientsList, retData));
+						    } 
+					} catch (UnsupportedEncodingException e) {
+						e.printStackTrace();
+					}
+					
+					}});} catch (Exception e) {
+						e.printStackTrace();
+					
+					}
 		return recipeList;
 	}
 
@@ -177,6 +211,21 @@ public class RecipeDAO {
 	 */
 	public static long getPhotoCount() {
 		long num = 0;
+		Cursor myCursor = null;
+		try {
+		    myCursor = connectionBerkeley.openCursor(null, null);
+		 
+		    DatabaseEntry foundKey = new DatabaseEntry();
+		    DatabaseEntry foundData = new DatabaseEntry();
+		    
+		    while(myCursor.getNext(foundKey, foundData, LockMode.DEFAULT) == OperationStatus.SUCCESS) {
+		        num++;
+		    }
+		    myCursor.close();
+		} 
+		catch (DatabaseException de) {
+		    System.err.println("Erreur de lecture de la base de données: " + de);
+		} 
 		
 		return num;
 	}
@@ -200,12 +249,11 @@ public class RecipeDAO {
 	 * @return la derni�re recette
 	 */
 	public static Recipe getLastAddedRecipe() {
-		//Recipe recipe = null;
-		Document doc = new Document();
-		doc.append("_id", -1);
+		final List<Recipe> recipeList = new ArrayList<Recipe>();
+		Document groupBy = new Document();
+		groupBy.append("_id", -1);
 		final List<Ingredient> ingredientsList = new ArrayList<Ingredient>();
-		//final byte [] retData = null;
-		FindIterable<Document> iterator = RecipeDAO.collection.find().sort(doc).limit(1);
+		FindIterable<Document> iterator = RecipeDAO.collection.find().sort(groupBy).limit(1);
 		
 		try {
 			iterator.forEach(new Block<Document>() {
@@ -229,7 +277,7 @@ public class RecipeDAO {
 						 DatabaseEntry theData = new DatabaseEntry();
 						 if (connectionBerkeley.get(null, theKey, theData, LockMode.DEFAULT) == OperationStatus.SUCCESS) { 
 						    	retData = theData.getData();
-						    	lastRecipe = new Recipe(Id,recipeName,prepTime,cookTime,portions,steps,ingredientsList, retData);
+						    	recipeList.add( new Recipe(Id,recipeName,prepTime,cookTime,portions,steps,ingredientsList, retData));
 
 						    } 
 					} catch (UnsupportedEncodingException e) {
@@ -238,13 +286,11 @@ public class RecipeDAO {
 					}
 				   
 						
-				   
-					
 					}});} catch (Exception e) {
 						e.printStackTrace();
 					}
 		
-		return lastRecipe;
+		return recipeList.get(0);
 	}
 	
 	/**
@@ -285,6 +331,8 @@ public class RecipeDAO {
 	 */
 	public static List<String> getSimilarRecipes(long recipeId, int limit) {
 		List<String> recipeList = new ArrayList<String>();
+		
+		
 
 		return recipeList;
 	}

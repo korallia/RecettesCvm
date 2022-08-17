@@ -11,7 +11,7 @@ public class BerkeleyConnection {
 	private static Database connection;
 	private static Environment environment;
 	private static final String DB_PATH = "database/";
-	private static final String DB_NAME = "personne_db";
+	private static final String DB_NAME = "berkeley_db";
 	
 	/**
 	 * M�thode qui permet de retourner une connexion � la base de donn�es
